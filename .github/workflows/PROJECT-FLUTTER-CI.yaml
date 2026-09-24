@@ -93,7 +93,7 @@ env:
   ENABLE_IOS: "true"        # iOS 빌드 활성화 (true/false)
 
   # 🔧 프로젝트별 설정
-  FLUTTER_VERSION: "3.35.5"
+  FLUTTER_VERSION: "3.38.9"
   JAVA_VERSION: "17"
   XCODE_VERSION: "26.0"
   ENV_FILE_PATH: ".env"     # dotenv 모드에서 .env를 만들 경로 (Flutter 루트 기준, 커스터마이징 가능)

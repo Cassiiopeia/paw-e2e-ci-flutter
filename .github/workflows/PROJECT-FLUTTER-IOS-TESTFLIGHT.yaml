@@ -74,7 +74,7 @@ env:
   FLUTTER_PROJECT_DIR: "."
   # 환경변수 전달 방식 (dart-define | dotenv) — 설치 시 선택값으로 자동 설정
   ENV_MODE: "dart-define"
-  FLUTTER_VERSION: "3.35.5"
+  FLUTTER_VERSION: "3.38.9"
   XCODE_VERSION: "26.0"
   PROJECT_TYPE: "flutter"
 
