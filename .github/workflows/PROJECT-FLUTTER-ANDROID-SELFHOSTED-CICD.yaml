@@ -158,7 +158,7 @@ jobs:
       - name: Setup Gradle
         working-directory: ${{ env.FLUTTER_PROJECT_DIR }}/android
         run: |
-          chmod +x gradlew
+          [ -f gradlew ] && chmod +x gradlew || true
           echo "Gradle wrapper permissions set"
 
       # Java 설정 및 버전 확인

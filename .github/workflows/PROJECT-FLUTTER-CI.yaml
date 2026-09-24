@@ -461,7 +461,7 @@ jobs:
       - name: Setup Gradle
         working-directory: ${{ env.FLUTTER_PROJECT_DIR }}/android
         run: |
-          chmod +x gradlew
+          [ -f gradlew ] && chmod +x gradlew || true
           echo "✅ Gradle wrapper permissions set"
 
       # APK 빌드 (CI는 빌드 검증 목적이므로 서명 불필요한 debug 빌드 사용)
@@ -597,7 +597,7 @@ jobs:
       - name: Install CocoaPods
         run: |
           gem install cocoapods
-          cd ios && pod install --repo-update || pod install
+          cd ios && if [ -f Podfile ]; then pod install --repo-update || pod install; fi
           echo "✅ CocoaPods installed"
 
       # iOS 빌드 (서명 없이)

@@ -174,7 +174,7 @@ jobs:
       - name: Install CocoaPods
         run: |
           gem install cocoapods
-          cd ios && pod install
+          cd ios && if [ -f Podfile ]; then pod install; fi
 
       - name: 현재 버전 정보 가져오기
         id: current_version
@@ -320,7 +320,7 @@ jobs:
       - name: Install CocoaPods
         run: |
           gem install cocoapods
-          cd ios && pod install
+          cd ios && if [ -f Podfile ]; then pod install; fi
 
       - name: Import Code-Signing Certificates
         uses: Apple-Actions/import-codesign-certs@v2
